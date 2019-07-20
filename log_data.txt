@@ -1,0 +1,20 @@
+http://skyserver.sdss.org/log/en/traffic/sql.asp?url=http%3A%2F%2Fcluster.ischool.drexel.edu%2F~jz85%2FSDSSLogViewer%2FSDSSLogViewer.html%2F%2Ftools%2F
+
+result.csv
+
+SELECT theTime, clientIP, dbname, statement, elapsed, rows
+FROM SqlLog
+WHERE yy=2019 and dbname="BestDR14_SSD" and rows>0
+ORDER BY clientIP,mm,dd,hh,mi,ss
+
+Submitted: 30/6/19
+
+/Test/
+
+SELECT statement
+FROM SqlLog
+WHERE yy=2019 and mm=7 and dbname="BestDR14_SSD" and rows>0
+
+Submitted: 20/7/19
+
+Note: Gives all the queries of the BestDR14_SSD database that returned at least one row during 2019.

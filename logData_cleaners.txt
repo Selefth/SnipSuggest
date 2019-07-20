@@ -1,0 +1,39 @@
+Cleaner1
+Deletes NaNs and errors
+Fixes the rows of the data
+Returns as many rows you want from the final df
+Default choise --> return everything
+
+Cleaner2
+Takes the column of a df
+Replaces all demicals and integers with #
+Applies lowecase
+Wraps the queries to fit all in one line
+
+Cleaner3
+Takes the column of a df
+Finds bad words and returns the indexes of those queries
+
+Cleaner4
+for theta (threshold) 0.6
+Calls W2Vec
+Runs until there is no difference in the size of the dataset
+Compares every query with the following of it query and if they both have\
+the same day and the same clientIP, we compute the cos simil
+If that is more or equal than 0.6 we keep the index of that query which was\
+submitted earlier to delete it
+
+Cleaner5
+Transform the TimeStamp into a meanigful number
+Useful for SQL indexing
+
+W2Vec
+Slices each query based on its statements
+Via a neural networks builds a vocublary based on all queries and\
+transforms each query into a vector
+
+DeleteRow
+For a list of indexes, deletes the rows of a df and resets its indexes
+
+ZeroPadding
+If a is for instance 1, it will become 01
